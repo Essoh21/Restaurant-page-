@@ -1,0 +1,20 @@
+Goal : code the header of the restaurant page 
+
+Pseudo code of the header 
+     create a  div with class header 
+     inside the header add two divs 
+      in the first div of the header and  three divs that will contain the text 
+      in the second div of the header add a list of three  items (home menu and contact)
+      
+      
+  Home body
+        goal: create the html squeleton of the body of the home page 
+        
+             pseudo code 
+                         use three colors (white green and black 
+                         
+                         set an image as the back ground of the body
+                         add a div that contain the eat healthy text 
+                         add a button to reserve 
+                         add  copyright div that contain copyright 
+     
