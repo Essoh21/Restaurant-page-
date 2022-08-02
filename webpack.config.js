@@ -5,11 +5,13 @@ module.exports = {
 
     mode: 'production',
     entry: './src/index.js',
+    devtool: 'inline-source-map',
     output: {
         path: path.resolve(__dirname, 'dist'),
         filename: './main.js',
 
     },
+
     module: {
         rules: [{
                 test: /\.css$/i,

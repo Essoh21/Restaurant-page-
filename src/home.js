@@ -21,6 +21,12 @@ function setTextAsContent(text, targetNode) {
     targetNode.innerHTML = text;
 }
 
+function createLinkTo(linkRef) {
+    const linkTag = document.createElement('a');
+    linkTag.href = linkRef;
+    return linkTag;
+}
+
 function createHeaderHtml() {
     const bodyContent = document.querySelector('#content');
     const header = createChildWithClasseName('header');
@@ -55,11 +61,14 @@ function createHomeBodyHtml() {
     const homeBodyTitle = createChildWithClasseName('home-body-title');
     const orderButton = createChildWithClasseName('order-button');
     const copyRight = createChildWithClasseName('copy-right');
+    const copyRightLink = createLinkTo('https://github.com/Essoh21');
     const mask = createChildWithClasseName('mask');
 
-    setTextAsContent('Eat healthy', homeBodyTitle);
+    setTextAsContent('Eat healthy with us ', homeBodyTitle);
     setTextAsContent('Order Me', orderButton);
-    setTextAsContent('CopyRight@Essohanam2022', copyRight);
+    setTextAsContent('Copyright &copy;Essohanam2022', copyRightLink);
+
+    addChildToParent(copyRightLink, copyRight);
 
     const nodesArray = [homeBodyTitle, orderButton, copyRight, mask];
     nodesArray.forEach((bodyNode) => {
@@ -70,4 +79,18 @@ function createHomeBodyHtml() {
 
 }
 
-export { createHeaderHtml, createHomeBodyHtml };
+function createFooterHtml() {
+    const footer = createChildWithClasseName('footer');
+    const bodyContent = document.querySelector('#content');
+    setTextAsContent('jo-Gio', footer);
+    addChildToParent(footer, bodyContent);
+}
+
+export {
+    createHeaderHtml,
+    createHomeBodyHtml,
+    addChildToParent,
+    createChildWithClasseName,
+    setTextAsContent,
+    createFooterHtml
+};
