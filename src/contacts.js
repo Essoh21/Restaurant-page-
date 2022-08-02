@@ -6,7 +6,7 @@ function createContactBodyHtml() {
     const locationContainer = createChildWithClasseName('location-container');
     const contacts = createChildWithClasseName('contacts');
 
-    setTextAsContent(`Ville : Lomé <br/>    Quartier:   <br/>`, locationContainer);
+    setTextAsContent(` Ville : Lomé <br/>    Quartier:   <br/>`, locationContainer);
     setTextAsContent(`Contacts: 464-666-3456-44`, contacts);
 
     const contactItems = [locationContainer, contacts];

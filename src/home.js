@@ -92,5 +92,6 @@ export {
     addChildToParent,
     createChildWithClasseName,
     setTextAsContent,
-    createFooterHtml
+    createFooterHtml,
+    createLinkTo
 };

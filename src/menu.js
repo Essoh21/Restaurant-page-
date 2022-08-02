@@ -1,4 +1,4 @@
-import { addChildToParent, createChildWithClasseName, setTextAsContent } from './home';
+import { addChildToParent, createChildWithClasseName, setTextAsContent, createLinkTo } from './home';
 import { imagesNameArray, menuImagesSourcesArray, pricesArray } from './images.js';
 const NUMBER_OF_MENU = imagesNameArray.length;
 
@@ -25,6 +25,7 @@ class MenuCard {
 
     }
     createMenuCard() {
+        const cardLink = createLinkTo(`https://wa.me/22891418445?text=bonjour`);
 
         const cardContainer = createChildWithClasseName('card-container');
         const menuImage = createImageWithSource(this.menuImageSource, this.menuImageWidth, this.menuImageHeight);
@@ -35,9 +36,10 @@ class MenuCard {
             addChildToParent(cardItem, cardContainer);
 
         });
+        addChildToParent(cardContainer, cardLink);
 
 
-        return cardContainer;
+        return cardLink;
 
     }
 }
